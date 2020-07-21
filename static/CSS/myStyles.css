@@ -1,0 +1,201 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e6e6e6;
+}
+
+html{
+    background-color: #e6e6e6;
+}
+
+footer{
+    /*position: fixed;*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e9e9e9;
+    color: black;
+}
+
+footer > a{
+    margin-right: 10px;
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    background-color: #e6e6e6;
+    margin-right: 20px;
+    margin-top: 20px;
+    direction: rtl;
+    color: black;
+    font-size: 20px;
+    direction: rtl;
+    font-family: "B Homa";
+}
+
+
+.personalized-container{
+    text-align: right;
+}
+
+.container-fluid > div{
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    font-size: 20px;
+    direction: rtl;
+    font-family: "B Homa";
+}
+
+p {
+    direction: rtl;
+    margin-top: -20px;
+    margin-right: -2px;
+}
+
+.row{
+    direction: rtl;
+}
+
+.my-header{
+    margin-right: 20px;
+    margin-top: 20px;
+    direction: rtl;
+}
+
+
+.my-btn{
+    margin-top: 10px;
+    margin-left: 20px;
+    background-color: #e6e6e6;
+    float: left;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+}
+
+.my-tooltip + .tooltip > .tooltip-inner {
+    background-color: rgba(230, 204, 255, 0.6);
+    border: none;
+    font-family: "B Arshia";
+    font-size: 19px;
+    color: black;
+}
+
+.my-navbar{
+    background-color: rgba(230, 204, 255, 0.5);
+}
+
+.dropdown-menu, .dropdown-menu-right{
+    background-color: rgba(230, 204, 255, 0.5);
+    text-align: right;
+    border: none;
+    overflow: hidden;
+    direction: rtl;
+}
+
+
+.my-navTabs{
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.my-navTabs-Pills{
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.my-navTabs-Pills:hover{
+    background-color: rgba(193, 128, 255, 0.3);
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    background-color: rgba(193, 128, 255, 0.3);
+    border-radius: 5px;
+    border-style: none;
+}
+
+.signInUp{
+    background-color: rgba(230, 204, 255, 0.5);
+    border-radius: 10px;
+}
+
+
+.footerHR{
+    border: 1.5px solid rgba(230, 204, 255, 0.5);
+}
+
+.footerLINKS{
+    text-decoration: none;
+    font-size: 15px;
+    color: #1a1a1a;
+}
+
+.myBorder{
+    border: 1px solid rgba(230, 204, 255, 0.3);
+    border-radius: 4px;
+}
+
+.myBackgrounds{
+    background-color: rgba(230, 204, 255, 0.5);border-radius: 10px;
+}
+
+.myNavTabPills{
+    color: rgb(230, 204, 255);
+}
+
+.myNavTabPills:hover{
+    background-color: rgb(193, 128, 255);
+}
+
+table, th, td
+{
+    background:#c82c74;
+    margin:25px auto;
+    font-family: b nazanin;
+    font-size: 20px;
+}
+table, th, td
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td
+{
+    padding: 15px;
+}
+caption
+{
+    margin-bottom:15px;
+    color:rgb(230, 204, 255);
+}
+
+.search-container button {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #e9e9e9;
+}
+
+footer{
+    font-family: "B Homa";
+}
+
+/*search*/

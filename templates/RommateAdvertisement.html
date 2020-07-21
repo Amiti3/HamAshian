@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>انتشار آگهی</title>
+
+    <!--bootstrap CSS -->
+    <link rel="stylesheet" href="../static/CSS/bootstrap.css">
+    <link rel="stylesheet" href="../static/CSS/bootstrap.css.map">
+    <link rel="stylesheet" href="../static/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/CSS/bootstrap.min.css.map">
+    <link rel="stylesheet" href="../static/CSS/bootstrap-grid.css">
+    <link rel="stylesheet" href="../static/CSS/bootstrap-grid.css.map">
+    <link rel="stylesheet" href="../static/CSS/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../static/CSS/bootstrap-grid.min.css.map">
+    <link rel="stylesheet" href="../static/CSS/bootstrap-reboot.css">
+    <link rel="stylesheet" href="../static/CSS/bootstrap-reboot.css.map">
+    <link rel="stylesheet" href="../static/CSS/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="../static/CSS/bootstrap-reboot.min.css.map">
+    <!--bootstrap RTL CSS-->
+    <link rel="stylesheet" href="../static/CSS/bootstrap-rtl.css">
+    <link rel="stylesheet" href="../static/CSS/bootstrap-rtl.min.css">
+    <!--my Styles-->
+    <link rel="stylesheet" href="../static/CSS/myStyles.css">
+
+    <!--bootstrap JS-->
+    <link rel="script" href="../static/JS/bootstrap.bundle.js">
+    <link rel="script" href="../static/JS/bootstrap.bundle.js.map">
+    <link rel="script" href="../static/JS/bootstrap.bundle.min.js">
+    <link rel="script" href="../static/JS/bootstrap.bundle.min.js.map">
+    <link rel="script" href="../static/JS/bootstrap.js">
+    <link rel="script" href="../static/JS/bootstrap.js.map">
+    <link rel="script" href="../static/JS/bootstrap.min.js">
+    <link rel="script" href="../static/JS/bootstrap.min.js.map">
+
+    <link rel="stylesheet" href="../static/CSS/Carousels.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script src="../static/JS/myScripts.js"></script>
+
+</head>
+<body style="background-color: #e6e6e6">
+
+<div class="container-fluid">
+    <!--header-->
+    <header>
+        <div class="row">
+
+            <!--First Col: website Name-->
+            <div class="col-sm-8">
+                <div class="my-header">
+                    <h1>هم آشیان</h1>
+                    <br>
+                    <p class="p">هم آشیان | محل پیدا کردن خونه و هم خونه موردنظر شما</p>
+                </div>
+            </div>
+
+            <!--Second Col: Signin/Signup & Shopping Card-->
+            <div class="col-sm-4">
+
+                <!--Signup/Signin-->
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                                {% csrf_token %}
+                                <a type="button" href="{% url "inout" %}" class="btn my-btn my-tooltip" data-toggle="tooltip"
+                                        data-placement="right" title="ورود/ثبت نام/خروج">
+                                    <input type="image" src="../static/Images/log.png" alt="submit" width="40" height="40">
+                                </a>
+
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+        <!--Second Row: NavBar-->
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-sm navbar-light my-navbar">
+
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{% url "index" %}">صفحه اصلی</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url "aboutUs" %}">درباره ما</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url "contactUs" %}">تماس با ما</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url "ad_making" %}">قوانین سایت</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: rgb(193, 128, 255); color: black; border: none; float: left; margin: revert">
+                                    <a href="{% url "advertisement" %}" style="color: black; text-decoration: none">ایجاد آگهی</a>
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!--body-->
+    <div class="row">
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-8" style="background-color: rgba(230, 204, 255, 0.5)">
+            <br>
+            <form method="post" action="">
+                {% csrf_token %}
+                <label for="price">قیمت اجاره: </label>
+                <input type="text" class="form-control" name="price" placeholder="قیمت اجاره" id="price">
+
+                <label for="personalInfo">اطلاعات شخصی: </label>
+                <textarea class="form-control" id="personalInfo" name="personalInfo" rows="3"></textarea>
+
+                <label for="city">شهر: </label>
+                <input type="text" class="form-control" name="city" placeholder="شهر" id="city">
+
+                <label for="region">منطقه: </label>
+                <input type="text" class="form-control" name="region" placeholder="منطقه" id="region">
+
+                <label for="address">آدرس: </label>
+                <input type="text" class="form-control" name="address" placeholder="آدرس" id="address">
+
+                <label for="houseArea">متراژ خانه: </label>
+                <input type="text" class="form-control" name="houseArea" placeholder="متراژ خانه" id="houseArea">
+
+                <label for="rommmateNum">تعداد هم خانه ای ها: </label>
+                <input type="text" class="form-control" name="roommmateNum" placeholder="تعداد هم خانه ای ها" id="rommmateNum">
+
+                <label for="roomNum">تعداد اتاق ها: </label>
+                <input type="text" class="form-control" name="roomNum" placeholder="تعداد اتاق ها" id="roomNum">
+
+                <label for="wcNum">تعداد سرویس بهداشتی: </label>
+                <input type="text" class="form-control" name="wcNum" placeholder="تعداد سرویس بهداشتی" id="wcNum">
+
+                <label for="ageOfHouse">سن خانه: </label>
+                <input type="text" class="form-control" name="ageOfHouse" placeholder="سن خانه" id="ageOfHouse">
+
+                <br>
+
+                <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: rgb(193, 128, 255); color: black; border: none; float: left; margin: revert">
+                    <a href="{% url 'adHouseRender' %}" style="color: black; text-decoration: none">ایجاد آگهی</a>
+                </button>
+                <br>
+            </form>
+
+        </div>
+
+        <div class="col-lg-2"></div>
+    </div>
+
+    <!--footer-->
+                    <footer>
+                        <br>
+                        <hr style=" border: 1.5px solid rgba(230, 204, 255, 0.5);">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h4>راهنمای استفاده از وبسایت هم آشیان</h4>
+                                <a href="{% url "advertisement" %}" class="footerLINKS">ثبت آگهی</a><br>
+                                <a href="{% url "ad_making" %}" class="footerLINKS">قوانین</a><br>
+                            </div>
+
+                            <div class="col-md-3">
+                                <h4>خدمات مشتریان</h4>
+                                <a href="{% url "contactUs" %}" class="footerLINKS">تماس با ما</a><br>
+                                <a href="{% url "aboutUs" %}" class="footerLINKS">درباره ی ما</a>
+                            </div>
+                        </div>
+                        <br>
+                    </footer>
+                </div>
+            </div>
+        </footer>
+
+</div>
+</body>
+</html>
